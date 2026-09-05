@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessible and performance-optimized interactive frontend project.">
+  <title>WebInteract | Optimized Frontend Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="header">
+    <a class="logo" href="#home" aria-label="WebInteract home">Web<span>Interact</span></a>
+
+    <nav id="navbar" class="nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeBtn" class="icon-btn" type="button"
+              aria-label="Switch to dark mode" aria-pressed="false">🌙</button>
+      <button id="menuBtn" class="icon-btn menu-btn" type="button"
+              aria-label="Open navigation menu" aria-expanded="false"
+              aria-controls="navbar">☰</button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">WEEK 4 FRONTEND PROJECT</p>
+        <h1 id="hero-title">Interactive Web <span>Experience</span></h1>
+        <p class="hero-text">
+          A responsive JavaScript webpage improved for performance,
+          semantic structure, accessibility and keyboard usability.
+        </p>
+        <div class="hero-actions">
+          <button id="exploreBtn" class="btn btn-primary" type="button">Explore Features</button>
+          <button id="messageBtn" class="btn btn-secondary" type="button">Show Message</button>
+        </div>
+        <p id="heroMessage" class="status-message" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="features" class="section" aria-labelledby="features-title">
+      <div class="section-heading">
+        <p class="eyebrow">OPTIMIZED FEATURES</p>
+        <h2 id="features-title">Interactive Elements</h2>
+        <p>JavaScript functionality is retained while the page uses cleaner semantics and accessible controls.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">⚡</div>
+          <h3>DOM Manipulation</h3>
+          <p>Dynamic updates are performed only when the user interacts with the interface.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🖱️</div>
+          <h3>Event Handling</h3>
+          <p>Buttons and navigation use explicit event listeners with accessible states.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Flexible grids and media queries support desktop, tablet and mobile layouts.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">♿</div>
+          <h3>Accessibility</h3>
+          <p>Keyboard focus, labels, live status messages and semantic landmarks improve usability.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Project statistics">
+      <div class="stat-box"><strong class="counter" data-target="100">0</strong><span>Users</span></div>
+      <div class="stat-box"><strong class="counter" data-target="25">0</strong><span>Features</span></div>
+      <div class="stat-box"><strong class="counter" data-target="50">0</strong><span>Projects</span></div>
+      <div class="stat-box"><strong class="counter" data-target="100">0</strong><span>Success %</span></div>
+    </section>
+
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="about-content">
+        <p class="eyebrow">ABOUT PROJECT</p>
+        <h2 id="about-title">Learning JavaScript Through Practice</h2>
+        <p>
+          The Week 3 project was used as the baseline. Week 4 focuses on improving
+          semantic HTML, accessibility, CSS efficiency, interaction states and
+          runtime behavior without changing the core user experience.
+        </p>
+        <button id="learnBtn" class="btn btn-primary" type="button"
+                aria-expanded="false" aria-controls="learnText">Learn More</button>
+        <p id="learnText" class="hidden-text" hidden>
+          The optimized version reduces unnecessary work, avoids repeated DOM lookups,
+          supports keyboard navigation and communicates dynamic changes to assistive technology.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="section-heading">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2 id="contact-title">Accessible Contact Form</h2>
+        <p>Required fields and validation feedback are exposed clearly to all users.</p>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name"
+                 placeholder="Enter your name" required aria-describedby="nameError">
+          <small id="nameError" class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email"
+                 placeholder="Enter your email" required aria-describedby="emailError">
+          <small id="emailError" class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="5"
+                    placeholder="Enter your message" required
+                    aria-describedby="messageError"></textarea>
+          <small id="messageError" class="error" aria-live="polite"></small>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit Message</button>
+        <p id="successMessage" class="success" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 WebInteract | Week 4 Performance & Accessibility Project</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
